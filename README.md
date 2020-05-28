@@ -1,1 +1,1 @@
-# AlgebraicMultiGridSolver
+# AlgebraicMultiGrid Solver
