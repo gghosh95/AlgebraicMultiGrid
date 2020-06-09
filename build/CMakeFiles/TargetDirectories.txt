@@ -1,0 +1,3 @@
+/home/gghosh/Desktop/dev/ConjugateGradientSolver/build/CMakeFiles/rebuild_cache.dir
+/home/gghosh/Desktop/dev/ConjugateGradientSolver/build/CMakeFiles/a.out.dir
+/home/gghosh/Desktop/dev/ConjugateGradientSolver/build/CMakeFiles/edit_cache.dir
