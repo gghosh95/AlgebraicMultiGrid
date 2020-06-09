@@ -1,1 +1,1 @@
-# AlgebraicMultiGrid Solver
+# Conjugate Gradient Solver
