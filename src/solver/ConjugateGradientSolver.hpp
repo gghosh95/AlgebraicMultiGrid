@@ -12,8 +12,6 @@ DATE   : 06/07/2020
 #include<iostream>
 #include<vector>
 #include<fstream>
-#include<thread>
-#include<chrono>
 #include<stdlib.h>
 #include<time.h>
 
@@ -28,27 +26,29 @@ typedef Eigen::VectorXd Vector;
 
 class ConjugateGradientSolver
 {
- // private vectors/matrices
-  private:
-    Vector F;
-    DenseMatrix K;
-    Vector U_guess;   
-  
-  // private member variables
-  private:
-    double tolerance; 
-    int max_iterations, total_equations;
-  
-    std::ofstream file_writer; 
-
-  // Constuctor/destructor
+ // Constuctor/destructor
   public:
     ConjugateGradientSolver(std::string K_file, std::string F_file, const unsigned total_equations);
    ~ConjugateGradientSolver();
+ 
+ // private vectors/matrices
+  private:
+    DenseMatrix K;
+    Vector d, f, r, u_guess, q;   
+  
+  // private member variables
+  private:
+    const double tolerance; 
+    const int max_iterations, total_equations;
+  
+    std::ofstream file_writer; 
    
   // public member functions 
   public:
     void Solve();
+    Vector GetSolution() const;
+    void PrintSolutionToConsole() const;
+    
 };
 
 #endif
